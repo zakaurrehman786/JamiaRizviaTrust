@@ -517,4 +517,194 @@ main {
   }
 }
 /***** End About Section *****/
+/***** History/Leadership Section *****/
+.history-section {
+  padding: 8rem 0;
+  background: linear-gradient(to bottom, #fff 0%, #f8f6f1 100%);
+}
+
+.history-section .section-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.history-section .section-title {
+  font-size: 3.2rem;
+  color: #000000;
+  position: relative;
+  display: inline-block;
+  padding-bottom: .3rem;
+  font-family: "Playfair Display", serif;
+}
+
+.history-section .section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  /* background-color: #d4a854; */
+}
+
+.leadership-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.leader-card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.leader-card.main-card {
+  flex: 0 1 30%;
+  transform: translateY(-1.5rem);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leader-card.side-card {
+  flex: 0 1 22%;
+}
+
+.leader-image {
+  width: 100%;
+  height: 18rem;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+
+.main-card .leader-image {
+  height: 20rem;
+}
+
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.3s ease;
+}
+
+.leader-card:hover .leader-image img {
+  transform: scale(1.05);
+}
+
+.leader-card h3 {
+  font-size: 1.6rem;
+  color: #0f3e2e;
+  margin-bottom: 0.4rem;
+  font-family: "Playfair Display", serif;
+}
+
+.main-card h3 {
+  font-size: 2rem;
+}
+
+.leader-card h4 {
+  font-size: 1.2rem;
+  color: #d4a854;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.leader-card p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  padding: 0 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.main-card p {
+  font-size: 1.4rem;
+}
+
+.leader-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.8rem;
+  background: #f8f9fa;
+  margin-top: 1.8rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 2.2rem;
+  color: #d4a854;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+
+.leader-contact-btn {
+  display: inline-block;
+  background: #d4a854;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.8rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+  margin: 1.5rem 2rem;
+  text-align: center;
+}
+
+.leader-contact-btn:hover {
+  background: #fff;
+  color: #d4a854;
+  border: 2px solid #d4a854;
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+  .leadership-cards {
+    flex-direction: column;
+  }
+  
+  .leader-card.main-card {
+    transform: none;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .leader-card.side-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    height: 20rem;
+  }
+}
+/***** End History/Leadership Section *****/
 

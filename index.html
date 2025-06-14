@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Jamia Rizvia Trust - Islamic Books and Knowledge" />
     <link rel="stylesheet" href="./src/cssfiles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>JamiaRizviaTrust</title>
   </head>
   <body>
@@ -13,13 +14,18 @@
       <div class="section-navbar">
         <div class="container">
           <nav class="navbar">
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/about.html">About</a></li>
-              <li><a href="/services.html">History</a></li>
-              <li><a href="/contact.html">Contact</a></li>
-              <li><a href="/services.html">Books</a></li>
-            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-content">
+              <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html">History</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/services.html">Books</a></li>
+              </ul>
+            </div>
             <button class="btn D-btn">Donate-Us</button>
           </nav>
         </div>
@@ -199,6 +205,61 @@
 </section>
 <!-- ========== End History Section ========== -->
 
+    <!-- ========== Start Footer Section ========== -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-logo-section">
+            <img src="/public/logo.png" alt="Jamia Rizvia Trust Logo" class="footer-logo">
+            <p>Spreading the light of Islamic knowledge and wisdom since 1990.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/services.html">Our Services</a></li>
+              <li><a href="/books.html">Islamic Books</a></li>
+              <li><a href="/donate">Support Us</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 123 Islamic Center Street</li>
+              <li><i class="fas fa-phone"></i> +1 (234) 567-8900</li>
+              <li><i class="fas fa-envelope"></i> info@jamiarizviatrust.org</li>
+              <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe to receive updates about our activities and events.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; ${2025} Jamia Rizvia Trust. All rights reserved.</p>
+          <p>Developed with ❤️</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== End Footer Section ========== -->
+
     <script src="./src/js/slider.js"></script>
+    <script src="./src/js/navbar.js"></script>
   </body>
 </html>

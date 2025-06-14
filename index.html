@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/cssfiles/style.css" />
+    <meta name="description" content="Jamia Rizvia Trust - Islamic Books and Knowledge" />
+    <link rel="stylesheet" href="./src/cssfiles/style.css" />
     <title>JamiaRizviaTrust</title>
   </head>
   <body>
@@ -16,8 +17,8 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="/about.html">About</a></li>
               <li><a href="/services.html">History</a></li>
+              <li><a href="/contact.html">Contact</a></li>
               <li><a href="/services.html">Books</a></li>
-              <li><a href="/contact.html">Contact-Us</a></li>
             </ul>
             <button class="btn D-btn">Donate-Us</button>
           </nav>
@@ -37,7 +38,74 @@
       </section>
     </main>
     <!-- ========== End hero Section ========== -->
-    <!-- Book section removed for restart -->
-    <!-- ========== End books Section ========== -->
+     <!-- ========== Start books Section ========== -->
+<section class="books-section">
+  <div class="container">
+    <div class="books-header">
+      <h2 class="section-title">Islamic Books</h2>
+      <a href="/books.html" class="btn view-all-btn">View All</a>
+    </div>
+    <div class="books-slider-wrapper">
+      <button class="slider-arrow left-arrow" aria-label="Previous slide">&#8592;</button>
+      <div class="books-slider">
+        <div class="book-card">
+          <img src="public/book1.jpg" alt="Quran Tafseer by Imam Ibn Kathir" class="book-image-rect" />
+          <div class="book-info">
+            <h3 class="book-title">Quran Tafseer</h3>
+            <p class="book-author">by Imam Ibn Kathir</p>
+            <p class="book-desc">A comprehensive explanation of the Holy Quran, widely respected in the Islamic world.</p>
+            <span class="book-price">Free</span>
+          </div>
+          <div class="book-actions">
+            <a href="/books/quran-tafseer.pdf" class="btn hero-btn">Read Online</a>
+            <a href="/books/download/quran-tafseer.pdf" class="btn download-btn">Download</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="public/book2.jpeg" alt="Hadith Collection by Imam Bukhari" class="book-image-rect" />
+          <div class="book-info">
+            <h3 class="book-title">Hadith Collection</h3>
+            <p class="book-author">by Imam Bukhari</p>
+            <p class="book-desc">A selection of authentic Hadiths, essential for understanding Islamic teachings.</p>
+            <span class="book-price">Free</span>
+          </div>
+          <div class="book-actions">
+            <a href="/books/hadith-collection.pdf" class="btn hero-btn">Read Online</a>
+            <a href="/books/download/hadith-collection.pdf" class="btn download-btn">Download</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="public/book4.jpg" alt="Islamic History by Dr. Tariq Ramadan" class="book-image-rect" />
+          <div class="book-info">
+            <h3 class="book-title">Islamic History</h3>
+            <p class="book-author">by Dr. Tariq Ramadan</p>
+            <p class="book-desc">Explore the rich history of Islam from its beginnings to the modern era.</p>
+            <span class="book-price">Free</span>
+          </div>
+          <div class="book-actions">
+            <a href="/books/islamic-history.pdf" class="btn hero-btn">Read Online</a>
+            <a href="/books/download/islamic-history.pdf" class="btn download-btn">Download</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="public/bok3.jpeg" alt="Islamic Fiqh by Mufti Taqi Usmani" class="book-image-rect" />
+          <div class="book-info">
+            <h3 class="book-title">Islamic Fiqh</h3>
+            <p class="book-author">by Mufti Taqi Usmani</p>
+            <p class="book-desc">A modern guide to Islamic jurisprudence and its application in daily life.</p>
+            <span class="book-price">Free</span>
+          </div>
+          <div class="book-actions">
+            <a href="/books/islamic-fiqh.pdf" class="btn hero-btn">Read Online</a>
+            <a href="/books/download/islamic-fiqh.pdf" class="btn download-btn">Download</a>
+          </div>
+        </div>
+      </div>
+      <button class="slider-arrow right-arrow" aria-label="Next slide">&#8594;</button>
+    </div>
+  </div>
+</section>
+<!-- ========== End books Section ========== -->
+    <script src="./src/js/slider.js"></script>
   </body>
 </html>

@@ -1070,4 +1070,240 @@ main {
 }
 
 /* End Responsive Navbar */
+/***** Donation Page Styles *****/
+.donation-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/public/hero-main.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.donation-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.donation-hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: var(--h1-color);
+  font-family: "Playfair Display", serif;
+}
+
+.donation-hero-content p {
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.donation-section {
+  padding: 8rem 0;
+  background: #f8f9fa;
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.donation-info h2 {
+  font-size: 3rem;
+  color: var(--navbar-color);
+  margin-bottom: 3rem;
+  font-family: "Playfair Display", serif;
+}
+
+.donation-features {
+  display: grid;
+  gap: 2rem;
+}
+
+.feature {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature i {
+  font-size: 2.4rem;
+  color: var(--btn-and-decor-color);
+  margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+  font-size: 1.8rem;
+  color: var(--navbar-color);
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.donation-form-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 3rem;
+}
+
+.form-section h3 {
+  font-size: 1.8rem;
+  color: var(--navbar-color);
+  margin-bottom: 1.5rem;
+}
+
+.amount-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.amount-btn {
+  padding: 1.2rem;
+  border: 2px solid var(--btn-and-decor-color);
+  border-radius: 0.5rem;
+  background: white;
+  color: var(--btn-and-decor-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.amount-btn:hover,
+.amount-btn.active {
+  background: var(--btn-and-decor-color);
+  color: white;
+}
+
+.custom-amount-input input {
+  width: 100%;
+  padding: 1.2rem;
+  border: 2px solid var(--btn-and-decor-color);
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-grid input,
+.donation-form select {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.payment-methods {
+  display: grid;
+  gap: 1rem;
+}
+
+.payment-method {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+  border-color: var(--btn-and-decor-color);
+}
+
+.method-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+.method-content i {
+  color: var(--btn-and-decor-color);
+}
+
+.submit-donation {
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--btn-and-decor-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.submit-donation:hover {
+  background: var(--navbar-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles for Donation Page */
+@media screen and (max-width: 1024px) {
+  .donation-grid {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+  
+  .donation-hero-content h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .amount-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .donation-form-container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .donation-hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .amount-options {
+    grid-template-columns: 1fr;
+  }
+}
 

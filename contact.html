@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Jamia Rizvia Trust - Get in touch with us">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/cssfiles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Contact Us - Jamia Rizvia Trust</title>
+</head>
+<body>
+    <!-- ========== Start navbar Section ========== -->
+    <header>
+        <div class="section-navbar">
+            <div class="container">
+                <nav class="navbar">
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="nav-content">
+                        <ul class="nav-links">                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/services.html">History</a></li>
+                            <li><a href="/services.html">Books</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <a href="/donate.html" class="btn D-btn">Donate-Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ========== End navbar Section ========== -->
+
+    <!-- ========== Contact Hero Section ========== -->
+    <section class="contact-hero">
+        <div class="overlay"></div>
+        <div class="contact-hero-content">
+            <h1>Get in Touch</h1>
+            <p>Connect with us to learn more about our mission and services</p>
+        </div>
+    </section>
+
+    <!-- ========== Quick Contact Section ========== -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>Available Mon-Fri, 9 AM - 6 PM</p>
+                    <a href="tel:+12345678900" class="contact-link">+1 (234) 567-8900</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>We reply within 24 hours</p>
+                    <a href="mailto:info@jamiarizviatrust.org" class="contact-link">info@jamiarizviatrust.org</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Visit our campus</p>
+                    <p class="contact-text">123 Islamic Center Street</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Contact Form Section ========== -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="form-container">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="donation">Donation Related</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Map and Address -->
+                <div class="contact-info">
+                    <div class="address-card">
+                        <h2>Our Location</h2>
+                        <div class="address-content">
+                            <div class="address-icon">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <div class="address-details">
+                                <p><i class="fas fa-map-marker-alt"></i> 123 Islamic Center Street</p>
+                                <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
+                                <div class="social-links">
+                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer Section ========== -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo-section">
+                    <img src="/public/logo.png" alt="Jamia Rizvia Trust Logo" class="footer-logo">
+                    <p>Spreading the light of Islamic knowledge and wisdom since 1990.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Our Services</a></li>
+                        <li><a href="/books.html">Islamic Books</a></li>
+                        <li><a href="/donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Islamic Center Street</li>
+                        <li><i class="fas fa-phone"></i> +1 (234) 567-8900</li>
+                        <li><i class="fas fa-envelope"></i> info@jamiarizviatrust.org</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates about our activities and events.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jamia Rizvia Trust. All rights reserved.</p>
+                <p>Developed with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/navbar.js"></script>
+    <script src="src/js/contact.js"></script>
+</body>
+</html>

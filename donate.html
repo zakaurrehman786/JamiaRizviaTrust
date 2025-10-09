@@ -3,10 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Support Jamia Rizvia Trust - Donate for Islamic Education" />
+    <meta name="description" content="Support Jamia Rizvia Trust - Make a donation to help spread Islamic education and knowledge. Your contribution makes a difference" />
+    <meta name="keywords" content="donate to Islamic education, support Islamic trust, Islamic charity, Jamia Rizvia donation" />
+    <meta name="author" content="Jamia Rizvia Trust" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jamiarizviatrust.com/donate" />
+    <meta property="og:title" content="Support Us - Jamia Rizvia Trust - Make a Donation" />
+    <meta property="og:description" content="Make a donation to help spread Islamic education and knowledge. Your contribution makes a difference" />
+    <meta property="og:image" content="./public/hero-main.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jamiarizviatrust.com/donate" />
+    <meta property="twitter:title" content="Support Us - Jamia Rizvia Trust - Make a Donation" />
+    <meta property="twitter:description" content="Make a donation to help spread Islamic education and knowledge. Your contribution makes a difference" />
+    <meta property="twitter:image" content="./public/hero-main.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./public/logo.png" />
+    <link rel="apple-touch-icon" href="./public/logo.png" />
+    
     <link rel="stylesheet" href="./src/cssfiles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Donate - Jamia Rizvia Trust</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Support Us - Jamia Rizvia Trust - Make a Donation</title>
   </head>
   <body>
     <!-- ========== Start navbar Section ========== -->
@@ -19,13 +46,14 @@
             </button>
             <div class="nav-content">
               <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/services.html">History</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/services.html">Books</a></li>              </ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#about-section">About</a></li>
+                <li><a href="./index.html#leadership-section">Leadership</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <!-- <li><a href="./books.html">Books</a></li> -->
+              </ul>
             </div>
-            <a href="/donate.html" class="btn D-btn">Donate-Us</a>
+            <a href="./donate.html" class="btn D-btn">Support Us</a>
           </nav>
         </div>
       </div>
@@ -37,119 +65,74 @@
       <div class="overlay"></div>
       <div class="donation-hero-content">
         <h1>Support Our Cause</h1>
-        <p>Your donation helps us spread Islamic knowledge and educate future generations</p>
+        <p>
+          Your donation helps us spread Islamic knowledge and educate future
+          generations
+        </p>
       </div>
     </section>
     <!-- ========== End Donation Hero Section ========== -->
 
-    <!-- ========== Start Donation Form Section ========== -->
-    <section class="donation-section">
-      <div class="container">
-        <div class="donation-grid">
-          <!-- Donation Information -->
-          <div class="donation-info">
-            <h2>Why Donate?</h2>
-            <div class="donation-features">
-              <div class="feature">
-                <i class="fas fa-book-open"></i>
-                <h3>Islamic Education</h3>
-                <p>Support free Islamic education and resources for students worldwide</p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-mosque"></i>
-                <h3>Community Development</h3>
-                <p>Help us maintain and expand our facilities for community services</p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-hands-helping"></i>
-                <h3>Student Support</h3>
-                <p>Provide scholarships and resources for deserving students</p>
-              </div>
-            </div>
-          </div>
 
-          <!-- Donation Form -->
-          <div class="donation-form-container">
-            <form class="donation-form" id="donationForm">
-              <!-- Amount Selection -->
-              <div class="form-section">
-                <h3>Select Amount</h3>
-                <div class="amount-options">
-                  <button type="button" class="amount-btn" data-amount="100">$100</button>
-                  <button type="button" class="amount-btn" data-amount="500">$500</button>
-                  <button type="button" class="amount-btn" data-amount="1000">$1000</button>
-                  <button type="button" class="amount-btn custom">Custom</button>
-                </div>
-                <div class="custom-amount-input" style="display: none;">
-                  <input type="number" id="customAmount" placeholder="Enter amount" min="1">
-                </div>
-              </div>
-
-              <!-- Donation Type -->
-              <div class="form-section">
-                <h3>Donation Type</h3>
-                <select name="donationType" required>
-                  <option value="">Select Purpose</option>
-                  <option value="education">Islamic Education</option>
-                  <option value="facilities">Facility Maintenance</option>
-                  <option value="scholarship">Student Scholarship</option>
-                  <option value="general">General Fund</option>
-                </select>
-              </div>
-
-              <!-- Personal Information -->
-              <div class="form-section">
-                <h3>Your Information</h3>
-                <div class="form-grid">
-                  <input type="text" placeholder="First Name" required>
-                  <input type="text" placeholder="Last Name" required>
-                  <input type="email" placeholder="Email Address" required>
-                  <input type="tel" placeholder="Phone Number">
-                </div>
-              </div>
-
-              <!-- Payment Method -->
-              <div class="form-section">
-                <h3>Payment Method</h3>
-                <div class="payment-methods">
-                  <label class="payment-method">
-                    <input type="radio" name="payment" value="card" checked>
-                    <span class="method-content">
-                      <i class="fas fa-credit-card"></i>
-                      Credit/Debit Card
-                    </span>
-                  </label>
-                  <label class="payment-method">
-                    <input type="radio" name="payment" value="bank">
-                    <span class="method-content">
-                      <i class="fas fa-university"></i>
-                      Bank Transfer
-                    </span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Submit Button -->
-              <button type="submit" class="submit-donation">Donate Now</button>
-            </form>
-          </div>
+    <!-- ========== Start Donation Info Cards Section ========== -->
+    <section class="donation-info-cards">
+      <div class="donation-info-container">
+        <div class="donation-info-card">
+          <div class="donation-info-icon"><i class="fas fa-university"></i></div>
+          <h3>Allied Bank Limited (ABL)</h3>
+          <p><strong>Account Title:</strong> Jamia Rizvia Trust</p>
+          <p><strong>Account Number:</strong>0010018634560012</p>
+          <p><strong>Bank Name:</strong>Allied Bank Limited</p>
+          <p><strong>Branch Code:</strong> 0531</p>
+          <p><strong>IBAN:</strong>PK10ABPA0010018634560012</p>
+        </div>
+        
+        <div class="donation-info-card">
+          <div class="donation-info-icon"><i class="fas fa-receipt"></i></div>
+          <h3>Payment Confirmation</h3>
+          <p>After making your donation, please confirm your payment:</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+12345678900" class="donation-contact-link">+92 3218447222</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@jamiarizviatrust.com" class="donation-contact-link">info@jamiarizviatrust.com</a></p>
+          <p>Send your payment slip via WhatsApp or Email for quick verification.</p>
+        </div>
+        <div class="donation-info-card">
+          <div class="donation-info-icon"><i class="fas fa-landmark"></i></div>
+          <h3>JazzCash/EasyPaisa</h3>
+          <p><strong>Account Title:</strong>MUahmmad Whaheed Qadri</p>
+          <p><strong>Account Number:</strong>03218447222</p>
+          <p><strong>Bank Name:</strong>JazzCash/EasyPaisa</p>
+          <p><strong>IBAN:</strong>03218447222</p>
         </div>
       </div>
     </section>
-    <!-- ========== End Donation Form Section ========== -->
+    <!-- ========== End Donation Info Cards Section ========== -->
 
     <!-- ========== Start Footer Section ========== -->
     <footer class="footer-section">
       <div class="footer-container">
         <div class="footer-content">
           <div class="footer-logo-section">
-            <img src="/public/logo.png" alt="Jamia Rizvia Trust Logo" class="footer-logo">
-            <p>Spreading the light of Islamic knowledge and wisdom since 1990.</p>
+            <img
+              src="/public/logo.png"
+              alt="Jamia Rizvia Trust Logo"
+              class="footer-logo"
+            />
+            <p>
+              Spreading the light of Islamic knowledge and wisdom since 1990.
+            </p>
             <div class="social-links">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
           </div>
 
@@ -158,8 +141,8 @@
             <ul>
               <li><a href="/about.html">About Us</a></li>
               <li><a href="/services.html">Our Services</a></li>
-              <li><a href="/books.html">Islamic Books</a></li>
-              <li><a href="/donate">Support Us</a></li>
+              <!-- <li><a href="/books.html">Islamic Books</a></li> -->
+              <li><a href="/donate.html">Support Us</a></li>
               <li><a href="/contact.html">Contact</a></li>
             </ul>
           </div>
@@ -167,10 +150,12 @@
           <div class="footer-contact">
             <h3>Contact Us</h3>
             <ul>
-              <li><i class="fas fa-map-marker-alt"></i> 123 Islamic Center Street</li>
-              <li><i class="fas fa-phone"></i> +1 (234) 567-8900</li>
-              <li><i class="fas fa-envelope"></i> info@jamiarizviatrust.org</li>
-              <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Jamia Rizvia Trust, Model Town Lahore.
+              </li>
+              <li><i class="fas fa-phone"></i> +92 423 583 6261</li>
+              <li><i class="fas fa-envelope"></i> info@jamiarizviatrust.com</li>
+              <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
             </ul>
           </div>
 
@@ -178,7 +163,7 @@
             <h3>Newsletter</h3>
             <p>Subscribe to receive updates about our activities and events.</p>
             <form class="newsletter-form">
-              <input type="email" placeholder="Enter your email" required>
+              <input type="email" placeholder="Enter your email" required />
               <button type="submit" class="subscribe-btn">Subscribe</button>
             </form>
           </div>

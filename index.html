@@ -3,13 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jamia Rizvia Trust - Islamic Books and Knowledge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/cssfiles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>JamiaRizviaTrust</title>
+    <meta name="description" content="Jamia Rizvia Trust - A leading Islamic education and research center dedicated to spreading Islamic knowledge and wisdom since 1990" />
+    <meta name="keywords" content="Islamic education, Islamic research, Jamia Rizvia, Islamic studies, Islamic books, Islamic knowledge" />
+    <meta name="author" content="Jamia Rizvia Trust" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jamiarizviatrust.com/" />
+    <meta property="og:title" content="Jamia Rizvia Trust - Islamic Education & Research Center" />
+    <meta property="og:description" content="A leading Islamic education and research center dedicated to spreading Islamic knowledge and wisdom since 1990" />
+    <meta property="og:image" content="./public/hero-main.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jamiarizviatrust.com/" />
+    <meta property="twitter:title" content="Jamia Rizvia Trust - Islamic Education & Research Center" />
+    <meta property="twitter:description" content="A leading Islamic education and research center dedicated to spreading Islamic knowledge and wisdom since 1990" />
+    <meta property="twitter:image" content="./public/hero-main.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./public/logo.png" />
+    <link rel="apple-touch-icon" href="./public/logo.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/cssfiles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Jamia Rizvia Trust - Islamic Education & Research Center</title>
   </head>
   <body>
     <!-- ========== Start navbar Section ========== -->
@@ -22,14 +52,14 @@
             </button>
             <div class="nav-content">
               <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/services.html">History</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/services.html">Books</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#leadership-section">Leadership</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <!-- <li><a href="./books.html">Books</a></li> -->
               </ul>
             </div>
-            <a href="/donate.html" class="btn D-btn">Donate-Us</a>
+            <a href="./donate.html" class="btn D-btn">Support Us</a>
           </nav>
         </div>
       </div>
@@ -42,184 +72,307 @@
         <div class="hero-content">
           <h1>Welcome to Jamia Rizvia Trust</h1>
           <p>Spreading knowledge of the Holy Quran &amp; Sunnah</p>
-          <a href="/donate" class="btn hero-btn">Learn More</a>
+          <a href="#about-section" class="btn hero-btn">Learn More</a>
         </div>
       </section>
     </main>
     <!-- ========== End hero Section ========== -->
-     <!-- ========== Start books Section ========== -->
-<section class="books-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Islamic Books</h2>
-      <a href="/books.html" class="btn view-all-btn">View All Books</a>
-    </div>
-    <div class="books-slider-wrapper">
-      <button class="slider-arrow left-arrow" aria-label="Previous slide">&#8592;</button>
-      <div class="books-slider">
-        <div class="book-card">
-          <img src="public/book1.jpg" alt="Quran Tafseer by Imam Ibn Kathir" class="book-image-rect" />
-          <div class="book-info">
-            <h3 class="book-title">Quran Tafseer</h3>
-            <p class="book-author">by Imam Ibn Kathir</p>
-            <p class="book-desc">A comprehensive explanation of the Holy Quran, widely respected in the Islamic world.</p>
-            <span class="book-price">Free</span>
-          </div>
-          <div class="book-actions">
-            <a href="/books/quran-tafseer.pdf" class="btn hero-btn">Read Online</a>
-            <a href="/books/download/quran-tafseer.pdf" class="btn download-btn">Download</a>
-          </div>
+    <!-- ========== Start books Section ========== -->
+    <!-- <section class="books-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Islamic Books</h2>
+          <a href="/books.html" class="btn view-all-btn">View All Books</a>
         </div>
-        <div class="book-card">
-          <img src="public/book2.jpeg" alt="Hadith Collection by Imam Bukhari" class="book-image-rect" />
-          <div class="book-info">
-            <h3 class="book-title">Hadith Collection</h3>
-            <p class="book-author">by Imam Bukhari</p>
-            <p class="book-desc">A selection of authentic Hadiths, essential for understanding Islamic teachings.</p>
-            <span class="book-price">Free</span>
+        <div class="books-slider-wrapper">
+          <button class="slider-arrow left-arrow" aria-label="Previous slide">
+            &#8592;
+          </button>
+          <div class="books-slider">
+            <div class="book-card">
+              <img
+                src="public/book1.jpg"
+                alt="Quran Tafseer by Imam Ibn Kathir"
+                class="book-image-rect"
+              />
+              <div class="book-info">
+                <h3 class="book-title">Quran Tafseer</h3>
+                <p class="book-author">by Imam Ibn Kathir</p>
+                <p class="book-desc">
+                  A comprehensive explanation of the Holy Quran, widely
+                  respected in the Islamic world.
+                </p>
+                <span class="book-price">Free</span>
+              </div>
+              <div class="book-actions">
+                <a href="/books/quran-tafseer.pdf" class="btn hero-btn"
+                  >Read Online</a
+                >
+                <a
+                  href="/books/download/quran-tafseer.pdf"
+                  class="btn download-btn"
+                  >Download</a
+                >
+              </div>
+            </div>
+            <div class="book-card">
+              <img
+                src="public/book2.jpeg"
+                alt="Hadith Collection by Imam Bukhari"
+                class="book-image-rect"
+              />
+              <div class="book-info">
+                <h3 class="book-title">Hadith Collection</h3>
+                <p class="book-author">by Imam Bukhari</p>
+                <p class="book-desc">
+                  A selection of authentic Hadiths, essential for understanding
+                  Islamic teachings.
+                </p>
+                <span class="book-price">Free</span>
+              </div>
+              <div class="book-actions">
+                <a href="/books/hadith-collection.pdf" class="btn hero-btn"
+                  >Read Online</a
+                >
+                <a
+                  href="/books/download/hadith-collection.pdf"
+                  class="btn download-btn"
+                  >Download</a
+                >
+              </div>
+            </div>
+            <div class="book-card">
+              <img
+                src="public/book4.jpg"
+                alt="Islamic History by Dr. Tariq Ramadan"
+                class="book-image-rect"
+              />
+              <div class="book-info">
+                <h3 class="book-title">Islamic History</h3>
+                <p class="book-author">by Dr. Tariq Ramadan</p>
+                <p class="book-desc">
+                  Explore the rich history of Islam from its beginnings to the
+                  modern era.
+                </p>
+                <span class="book-price">Free</span>
+              </div>
+              <div class="book-actions">
+                <a href="/books/islamic-history.pdf" class="btn hero-btn"
+                  >Read Online</a
+                >
+                <a
+                  href="/books/download/islamic-history.pdf"
+                  class="btn download-btn"
+                  >Download</a
+                >
+              </div>
+            </div>
+            <div class="book-card">
+              <img
+                src="public/bok3.jpeg"
+                alt="Islamic Fiqh by Mufti Taqi Usmani"
+                class="book-image-rect"
+              />
+              <div class="book-info">
+                <h3 class="book-title">Islamic Fiqh</h3>
+                <p class="book-author">by Mufti Taqi Usmani</p>
+                <p class="book-desc">
+                  A modern guide to Islamic jurisprudence and its application in
+                  daily life.
+                </p>
+                <span class="book-price">Free</span>
+              </div>
+              <div class="book-actions">
+                <a href="/books/islamic-fiqh.pdf" class="btn hero-btn"
+                  >Read Online</a
+                >
+                <a
+                  href="/books/download/islamic-fiqh.pdf"
+                  class="btn download-btn"
+                  >Download</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="book-actions">
-            <a href="/books/hadith-collection.pdf" class="btn hero-btn">Read Online</a>
-            <a href="/books/download/hadith-collection.pdf" class="btn download-btn">Download</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <img src="public/book4.jpg" alt="Islamic History by Dr. Tariq Ramadan" class="book-image-rect" />
-          <div class="book-info">
-            <h3 class="book-title">Islamic History</h3>
-            <p class="book-author">by Dr. Tariq Ramadan</p>
-            <p class="book-desc">Explore the rich history of Islam from its beginnings to the modern era.</p>
-            <span class="book-price">Free</span>
-          </div>
-          <div class="book-actions">
-            <a href="/books/islamic-history.pdf" class="btn hero-btn">Read Online</a>
-            <a href="/books/download/islamic-history.pdf" class="btn download-btn">Download</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <img src="public/bok3.jpeg" alt="Islamic Fiqh by Mufti Taqi Usmani" class="book-image-rect" />
-          <div class="book-info">
-            <h3 class="book-title">Islamic Fiqh</h3>
-            <p class="book-author">by Mufti Taqi Usmani</p>
-            <p class="book-desc">A modern guide to Islamic jurisprudence and its application in daily life.</p>
-            <span class="book-price">Free</span>
-          </div>
-          <div class="book-actions">
-            <a href="/books/islamic-fiqh.pdf" class="btn hero-btn">Read Online</a>
-            <a href="/books/download/islamic-fiqh.pdf" class="btn download-btn">Download</a>
-          </div>
+          <button class="slider-arrow right-arrow" aria-label="Next slide">
+            &#8594;
+          </button>
         </div>
       </div>
-      <button class="slider-arrow right-arrow" aria-label="Next slide">&#8594;</button>
-    </div>
-  </div>
-</section>
-<!-- ========== End books Section ========== -->
+    </section> -->
+    <!-- ========== End books Section ========== -->
 
-<!-- ========== Start About Section ========== -->
-<section class="about-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">About Us</h2>
-    </div>
-    <div class="about-cards">
-      <div class="about-card">
-        <div class="about-image">
-          <img src="/public/abt.webp" alt="Students studying Islamic texts" />
+    <!-- ========== Start About Section ========== -->
+    <section id="about-section" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Us</h2>
         </div>
-        <h2>Our Mission</h2>
-        <p>Empowering minds through accessible Islamic education. We're dedicated to preserving and sharing authentic Islamic knowledge via digital platforms, serving both Urdu and English-speaking communities globally.</p>
-        <a href="/donate" class="about-btn">Support Our Mission</a>
-      </div>
-
-      <div class="about-card">
-        <div class="about-image">
-          <img src="/public/abt.webp" alt="Digital Islamic library platform" />
-        </div>
-        <h2>Our Goal</h2>
-        <p>Creating a comprehensive digital library of authentic Islamic resources. We aim to make quality Islamic education freely accessible, connecting seekers with verified sources and expert guidance.</p>
-        <a href="/donate" class="about-btn">Contribute to Our Goal</a>
-      </div>
-
-      <div class="about-card">
-        <div class="about-image">
-          <img src="/public/abt.webp" alt="Teaching Islamic values" />
-        </div>
-        <h2>Our Cause</h2>
-        <p>Preserving Islamic heritage for future generations. By digitizing and sharing authentic Islamic knowledge, we ensure that the light of Islamic wisdom continues to guide and inspire generations to come.</p>
-        <a href="/donate" class="about-btn">Support Our Cause</a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ========== End About Section ========== -->
-
-<!-- ========== Start History Section ========== -->
-<section class="history-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Our Leadership</h2>
-    </div>
-    <div class="leadership-cards">
-      <div class="leader-card side-card">
-        <div class="leader-image">
-          <img src="/public/img.png" alt="Principal of Jamia Rizvia Trust" />
-        </div>
-        <h3>Mufti Ahmed Khan</h3>
-        <h4>Principal</h4>
-        <p>Leading our educational initiatives with over 20 years of experience in Islamic education and community service.</p>
-        <a href="/contact" class="leader-contact-btn">Get in Touch</a>
-      </div>
-
-      <div class="leader-card main-card">
-        <div class="leader-image">
-          <img src="/public/img.png" alt="Founder of Jamia Rizvia Trust" />
-        </div>
-        <h3>Late Allama Muhammad Rizvi</h3>
-        <h4>Founder (1950-2010)</h4>
-        <p>Established Jamia Rizvia Trust in 1990 with the vision of making Islamic knowledge accessible to all. His legacy continues through the thousands of lives he touched and the institution he built. May Allah grant him the highest ranks in Jannah.</p>
-        <div class="leader-stats">
-          <div class="stat">
-            <span>20</span>
-            <p>Years of Leadership</p>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-image">
+              <img
+                src="./public/ourmission.png"
+                alt="Students studying Islamic texts"
+              />
+            </div>
+            <h2>Our Mission</h2>
+            <p>
+              We are planning to establish an educational institute that will
+              provide a unique blend of Deeni and Dunyawi education. Our vision
+              is to create a platform where a child who has memorized the Quran
+              (Hafiz) can also complete Islamic sciences alongside modern
+              academics such as Matric, O-Levels, and A-Levels, progressing
+              through Dars-e-Nizami (Aama & Khasa) while being fully equipped
+              with contemporary knowledge.
+            </p>
+            <a href="/donate.html" class="about-btn">Support Our Mission</a>
           </div>
-          <div class="stat">
-            <span>10K+</span>
-            <p>Students Guided</p>
+
+          <div class="about-card">
+            <div class="about-image">
+              <img
+                src="/public/ourgoal.png"
+                alt="Digital Islamic library platform"
+              />
+            </div>
+            <h2>Our Goal</h2>
+            <p>
+              Why do we want to establish such an institute? Because today’s
+              generation faces a gap those who excel in modern education often
+              lack strong religious foundations, while those dedicated to
+              religious education may miss opportunities to engage with modern
+              fields. We want to bridge this gap by producing a new generation
+              of leaders who combine both Islamic knowledge and modern
+              expertise, becoming true representatives of Deen and Dunya
+              together.
+            </p>
+            <a href="/donate.html" class="about-btn">Contribute to Our Goal</a>
           </div>
-          <div class="stat">
-            <span>50+</span>
-            <p>Published Works</p>
+
+          <div class="about-card">
+            <div class="about-image">
+              <img src="/public/ourfuture.png" alt="Teaching Islamic values" />
+            </div>
+            <h2>Our Future Vision</h2>
+            <p>
+              Launching online teaching programs so that students across the
+              world can benefit from both Islamic and modern education.
+              Introducing computer and digital literacy courses to prepare our
+              youth for the modern workplace, entrepreneurship, and emerging
+              technologies. Building a curriculum that emphasizes character
+              development, leadership, and social responsibility alongside
+              academic excellence.
+            </p>
+            <a href="/donate.html" class="about-btn"
+              >Support Our Future Vision</a
+            >
           </div>
         </div>
       </div>
+    </section>
+    <!-- ========== End About Section ========== -->
 
-      <div class="leader-card side-card">
-        <div class="leader-image">
-          <img src="/public/img.png" alt="Vice Principal of Jamia Rizvia Trust" />
+    <!-- ========== Start History Section ========== -->
+    <section id="leadership-section" class="history-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Leadership</h2>
         </div>
-        <h3>Mufti Imran Ali</h3>
-        <h4>Vice Principal</h4>
-        <p>Overseeing academic excellence and student development with expertise in Islamic jurisprudence and modern education.</p>
-        <a href="/contact" class="leader-contact-btn">Get in Touch</a>
+        <div class="leadership-cards">
+          <div class="leader-card side-card">
+            <div class="leader-image">
+              <img
+                src="/public/Ahmad shb.png"
+                alt="Principal of Jamia Rizvia Trust"
+              />
+            </div>
+            <h3>Dr Ahmad Saeed Qadri</h3>
+            <h4>Managing trustee</h4>
+            <p>
+              Leading our educational initiatives with over 20 years of
+              experience in Islamic education and community service.
+            </p>
+            <a href="/contact.html" class="leader-contact-btn">Get in Touch</a>
+          </div>
+
+          <div class="leader-card main-card">
+            <div class="leader-image">
+              <img
+                src="/public/mufti shb (ra).png"
+                alt="Founder of Jamia Rizvia Trust"
+              />
+            </div>
+            <h3>Late Dr Mufti Ghulam Sarwer Qadri (RA)</h3>
+            <h4>Founder (1939-2010)</h4>
+            <p>
+              Established Jamia Rizvia Trust in 1984 with the vision of making
+              Islamic knowledge accessible to all. His legacy continues through
+              the thousands of lives he touched and the institution he built.
+              May Allah grant him the highest ranks in Jannah.
+            </p>
+            <div class="leader-stats">
+              <div class="stat">
+                <span>25</span>
+                <p>Years of Leadership</p>
+              </div>
+              <div class="stat">
+                <span>10K+</span>
+                <p>Students Guided</p>
+              </div>
+              <div class="stat">
+                <span>130+</span>
+                <p>Published Works</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="leader-card side-card">
+            <div class="leader-image">
+              <img
+                src="/public/waheed shb .png"
+                alt="Vice Principal of Jamia Rizvia Trust"
+              />
+            </div>
+            <h3>Mufti MUhammad Waheed Qadri</h3>
+            <h4>Vice Principal</h4>
+            <p>
+              Overseeing academic excellence and student development with
+              expertise in Islamic jurisprudence and modern education.
+            </p>
+            <a href="/contact.html" class="leader-contact-btn">Get in Touch</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- ========== End History Section ========== -->
+    </section>
+    <!-- ========== End History Section ========== -->
 
     <!-- ========== Start Footer Section ========== -->
     <footer class="footer-section">
       <div class="footer-container">
         <div class="footer-content">
           <div class="footer-logo-section">
-            <img src="/public/logo.png" alt="Jamia Rizvia Trust Logo" class="footer-logo">
-            <p>Spreading the light of Islamic knowledge and wisdom since 1990.</p>
+            <img
+              src="./public/logo.png"
+              alt="Jamia Rizvia Trust Logo"
+              class="footer-logo"
+            />
+            <p>
+              Spreading the light of Islamic knowledge and wisdom since 1990.
+            </p>
             <div class="social-links">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
           </div>
 
@@ -228,8 +381,8 @@
             <ul>
               <li><a href="/about.html">About Us</a></li>
               <li><a href="/services.html">Our Services</a></li>
-              <li><a href="/books.html">Islamic Books</a></li>
-              <li><a href="/donate">Support Us</a></li>
+              <!-- <li><a href="/books.html">Islamic Books</a></li> --> 
+              <li><a href="/donate.html">Support Us</a></li>
               <li><a href="/contact.html">Contact</a></li>
             </ul>
           </div>
@@ -237,10 +390,12 @@
           <div class="footer-contact">
             <h3>Contact Us</h3>
             <ul>
-              <li><i class="fas fa-map-marker-alt"></i> 123 Islamic Center Street</li>
-              <li><i class="fas fa-phone"></i> +1 (234) 567-8900</li>
-              <li><i class="fas fa-envelope"></i> info@jamiarizviatrust.org</li>
-              <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>Jamia Rizvia Trust, Model Town lahore.
+              </li>
+              <li><i class="fas fa-phone"></i>+92 423 583 6261</li>
+              <li><i class="fas fa-envelope"></i> info@jamiarizviatrust.com</li>
+              <li><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
             </ul>
           </div>
 
@@ -248,7 +403,7 @@
             <h3>Newsletter</h3>
             <p>Subscribe to receive updates about our activities and events.</p>
             <form class="newsletter-form">
-              <input type="email" placeholder="Enter your email" required>
+              <input type="email" placeholder="Enter your email" required />
               <button type="submit" class="subscribe-btn">Subscribe</button>
             </form>
           </div>

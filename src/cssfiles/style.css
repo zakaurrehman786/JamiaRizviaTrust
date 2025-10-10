@@ -268,7 +268,7 @@ main {
   unicode-bidi: isolate;
 }
 .hero-section {
-  background-image: url(/public/hero-main.png);
+  background-image: url(/hero-main.png);
   background-size: cover;
   background-position: center;
   height: 89vh;
@@ -1225,7 +1225,7 @@ main {
 /* End Responsive Navbar */
 /***** Donation Page Styles *****/
 .donation-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/public/hero-main.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/hero-main.jpg);
   background-size: cover;
   background-position: center;
   height: 40vh;
@@ -1469,7 +1469,7 @@ main {
     position: relative;
     height: 40vh;
     background: linear-gradient(rgba(15, 62, 46, 0.85), rgba(15, 62, 46, 0.85)),
-                url('../../public/hero-main.jpg') center/cover no-repeat;
+                url('/hero-main.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1823,7 +1823,7 @@ main {
     position: relative;
     height: 40vh;
     background: linear-gradient(rgba(15, 62, 46, 0.85), rgba(15, 62, 46, 0.85)),
-                url('../../public/hero-main.jpg') center/cover no-repeat;
+                url('/hero-main.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

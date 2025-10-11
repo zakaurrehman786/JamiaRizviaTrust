@@ -1,0 +1,58 @@
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+
+  .nav-content {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--navbar-color);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navbar.active .nav-content {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  .nav-links a:hover::after {
+    width: 0;
+  }
+
+  .D-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

@@ -12,6 +12,7 @@ export default {
     }
   },
   server: {
-    open: '/index.html'
+    open: '/index.html',
+    host: true  // This allows external access
   }
 }

@@ -1,3 +1,5 @@
+console.log("contact.js loaded");
+
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
@@ -26,9 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
 
             try {
-                // Simulate form submission (replace with actual API call in production)
-                await simulateFormSubmission(formData);
-                
+                // ✅ Send actual email through FormSubmit
+                await fetch('https://formsubmit.co/ajax/info@jamiarizviatrust.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
                 // Show success message
                 showNotification('Message sent successfully! We will get back to you soon.', 'success');
                 contactForm.reset();
@@ -36,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } catch (error) {
                 // Show error message
                 showNotification('Something went wrong. Please try again later.', 'error');
+                console.error(error);
                 
             } finally {
                 // Reset button state
@@ -47,25 +57,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function validateForm(data) {
-    // Name validation
     if (!data.name.trim()) {
         showNotification('Please enter your name', 'error');
         return false;
     }
 
-    // Email validation
     if (!data.email.trim() || !isValidEmail(data.email)) {
         showNotification('Please enter a valid email address', 'error');
         return false;
     }
 
-    // Subject validation
     if (!data.subject) {
         showNotification('Please select a subject', 'error');
         return false;
     }
 
-    // Message validation
     if (!data.message.trim()) {
         showNotification('Please enter your message', 'error');
         return false;
@@ -75,43 +81,25 @@ function validateForm(data) {
 }
 
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
     return emailRegex.test(email);
 }
 
 function showNotification(message, type) {
-    // Remove existing notification
     const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
+    if (existingNotification) existingNotification.remove();
 
-    // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.textContent = message;
 
-    // Add notification to page
     const formContainer = document.querySelector('.form-container');
     formContainer.insertBefore(notification, document.getElementById('contactForm'));
 
-    // Remove notification after 5 seconds
-    setTimeout(() => {
-        notification.remove();
-    }, 5000);
+    setTimeout(() => notification.remove(), 5000);
 }
 
-function simulateFormSubmission(formData) {
-    // Simulate API call with a promise
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            console.log('Form submitted:', formData);
-            resolve();
-        }, 2000);
-    });
-}
-
-// Add CSS for notifications
+// ✅ Add notification styles
 const style = document.createElement('style');
 style.textContent = `
     .notification {
@@ -122,28 +110,19 @@ style.textContent = `
         font-size: 1.4rem;
         animation: slideDown 0.3s ease-out;
     }
-
     .notification.success {
         background-color: #d4edda;
         color: #155724;
         border: 1px solid #c3e6cb;
     }
-
     .notification.error {
         background-color: #f8d7da;
         color: #721c24;
         border: 1px solid #f5c6cb;
     }
-
     @keyframes slideDown {
-        from {
-            transform: translateY(-20px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
     }
 `;
 document.head.appendChild(style);

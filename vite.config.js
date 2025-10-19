@@ -5,7 +5,7 @@ export default {
         main: 'index.html',
         contact: 'contact.html',
         donate: 'donate.html',
-        // books: 'books.html',
+        book_demo: 'book-demo.html',
         thankyou: 'thank-you.html',
         notfound: '404.html'
       }

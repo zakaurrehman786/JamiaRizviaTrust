@@ -40,8 +40,8 @@
     <meta property="twitter:image" content="/hero-main.webp" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/logo.webp" />
-    <link rel="apple-touch-icon" href="/logo.webp" />
+    <link rel="icon" type="image/png" href="/public/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,9 +71,9 @@
             <div class="nav-content">
               <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#leadership-section">Leadership</a></li>
-                <li><a href="#course-content-section">Courses</a></li>
+                <li><a href="/index.html#about-section">About</a></li>
+                <li><a href="/index.html#leadership-section">Leadership</a></li>
+                <li><a href="/index.html#course-content-section">Courses</a></li>
                 <li><a href="/contact.html">Contact</a></li>
               </ul>
             </div>
@@ -163,8 +163,9 @@
       </div>
     </section>
     <!-- ========== End About Section ========== -->
-    <!-- ========== Start Courses Content Section ========== -->
-    <section id="course-content-section" class="course-content-section">
+     <!-- ========== Start course Section ========== -->
+     
+ <section id="course-content-section" class="course-content-section">
       <div class="container">
         <div class="section-header course-tittle">
           <h2 class="section-title">Our Courses</h2>
@@ -190,8 +191,7 @@
                 >Enroll Now</a
               >
               <a
-                href="https://wa.me/+923242211217?text=I would like to book a demo class for Journey of Noor course."
-                target="_blank"
+                href="/book-demo.html"
                 class="demo-btn"
                 >Book Demo</a
               >
@@ -218,8 +218,7 @@
                 >Enroll Now</a
               >
               <a
-                href="https://wa.me/+923242211217?text=I would like to book a demo class for Hifz-e-Quran course."
-                target="_blank"
+                href="/book-demo.html"
                 class="demo-btn"
                 >Book Demo</a
               >
@@ -246,8 +245,7 @@
                 >Enroll Now</a
               >
               <a
-                href="https://wa.me/+923242211217?text=I would like to book a demo class for Roots of Islam course."
-                target="_blank"
+                href="/book-demo.html"
                 class="demo-btn"
                 >Book Demo</a
               >
@@ -275,8 +273,7 @@
                 >Enroll Now</a
               >
               <a
-                href="https://wa.me/+923242211217?text=I would like to book a demo class for Fiqh ul Hayat course."
-                target="_blank"
+                href="/book-demo.html"
                 class="demo-btn"
                 >Book Demo</a
               >
@@ -311,7 +308,6 @@
       </div>
     </section>
     <!-- ========== End Courses Content Section ========== -->
-
     <!-- ========== Start History Section ========== -->
     <section id="leadership-section" class="history-section">
       <div class="container">
@@ -392,7 +388,7 @@
         <div class="footer-content">
           <div class="footer-logo-section">
             <img
-              src="/logo.webp"
+              src="/public/logo.png"
               alt="Jamia Rizvia Trust Logo"
               class="footer-logo"
             />
@@ -400,7 +396,7 @@
               Spreading the light of Islamic knowledge and wisdom since 1984.
             </p>
             <div class="social-links">
-              <a href="#" aria-label="Facebook"
+              <!-- <a href="#" aria-label="Facebook"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a href="#" aria-label="Twitter"
@@ -411,7 +407,7 @@
               ></a>
               <a href="#" aria-label="YouTube"
                 ><i class="fab fa-youtube"></i
-              ></a>
+              ></a> -->
             </div>
           </div>
 
@@ -419,11 +415,14 @@
             <h3>Quick Links</h3>
             <ul>
               <li><a href="/index.html">Home</a></li>
-              <li><a href="#about-section">About Us</a></li>
-              <li><a href="#course-content-section">Our Courses</a></li>
-              <li><a href="#leadership-section">Leadership</a></li>
 
+              <li><a href="/index.html#about-section">About Us</a></li>
+              <li>
+                <a href="/index.html#course-content-section">Our Courses</a>
+              </li>
+              <li><a href="/index.html#leadership-section">Leadership</a></li>
               <li><a href="/donate.html">Support Us</a></li>
+              
               <li><a href="/contact.html">Contact Us</a></li>
             </ul>
           </div>
@@ -447,12 +446,9 @@
       </div>
       <div class="footer-bottom">
           <p>&copy; Copyright 2025 Jamia Rizvia Trust. All rights reserved.</p>
-          
         </div>
     </footer>
     <!-- ========== End Footer Section ========== -->
     <script type="module" src="/assets/js/navbar.js"></script>
-    
-
   </body>
 </html>

@@ -1662,7 +1662,7 @@ main {
 
 .address-card {
   background: #f8f9fa;
-  padding: 4rem;
+  padding: 2rem;
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   height: 100%;
@@ -1751,7 +1751,7 @@ main {
   .form-container,
   .address-card {
     padding: 1rem 2rem;
-    height: 50vh;
+    height: 65vh;
   }
 }
 
@@ -1759,6 +1759,7 @@ main {
   .contact-hero-content h1 {
     font-size: 3rem;
   }
+  
 
   .contact-hero-content p {
     font-size: 1.6rem;
@@ -1771,6 +1772,10 @@ main {
 
   .contact-icon i {
     font-size: 2.4rem;
+  }
+  .address-card {
+    padding: 1rem 2rem;
+    height: 65vh;
   }
 }
 

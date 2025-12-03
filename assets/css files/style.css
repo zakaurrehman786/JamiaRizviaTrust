@@ -1316,8 +1316,8 @@ main {
   .courses-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    /* padding: 2rem 0; */
   }
-  padding: 2rem 0;
 }
 
 .course-card {
@@ -1473,15 +1473,51 @@ main {
   height: 16px;
   color: var(--secondary-color);
 }
-{
+/* {
   justify-content: center;
   gap: 0.5rem;
-}
+} */
 
 .course-actions {
   display: flex;
   gap: 1rem;
   justify-content: center;
+}
+
+/* Simple coming-soon styling for dimming and centered badge */
+.course-card {
+  position: relative; /* ensure badge absolute positions inside the card */
+  overflow: visible; /* keep as-is to avoid layout shifts */
+}
+
+.course-card.coming-soon {
+  /* simple visual fade to indicate unavailable */
+  opacity: 0.45;
+}
+
+.course-card.coming-soon .coming-soon-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-accent); /* beige/skin color */
+  color: var(--btn-and-decor-color);
+  padding: 0rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  z-index: 30;
+  white-space: nowrap; /* keep on one line */
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* Disable buttons visually and functionally inside coming-soon cards */
+.course-card.coming-soon a.enroll-btn,
+.course-card.coming-soon a.demo-btn {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: default;
 }
 
 .enroll-btn,

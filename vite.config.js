@@ -7,7 +7,8 @@ export default {
         donate: 'donate.html',
         book_demo: 'book-demo.html',
         thankyou: 'thank-you.html',
-        notfound: '404.html'
+        notfound: '404.html',
+        about: 'about.html'
       }
     }
   },

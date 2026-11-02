@@ -4,6 +4,23 @@
   padding: 4rem 0 2rem 0;
 }
 
+/* Mobile tweak: ensure hero text is readable around 320-480px (focus 430px) */
+@media screen and (max-width: 480px) {
+  .hero-content-container h1 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+  }
+
+  .hero-description {
+    font-size: 1.6rem;
+  }
+
+  .hero-cta-group .btn {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.4rem;
+  }
+}
+
 .donation-info-container {
   display: flex;
   gap: 3rem;
@@ -4073,6 +4090,121 @@ body {
     font-size: 2.2rem;
   }
 }
+/* Mobile hero improvements: target 480px and below without affecting desktop/tablet */
+@media (max-width: 480px) {
+  .about-hero, .policy-hero, .contact-hero {
+    min-height: 56vh;
+    height: auto;
+    padding: 2.6rem 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .about-hero-content,
+  .contact-hero-content,
+  .policy-hero .container {
+    width: 92%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  /* Academy name (if present) kept smaller than main heading */
+  .about-hero-content .brand-tagline,
+  .about-hero-content .brand-sub,
+  .policy-hero .brand-tagline {
+    font-size: 15px;
+    color: #d4af37; /* golden accent */
+    margin-bottom: 0.35rem;
+    display: block;
+  }
+
+  /* Main hero headings (visual focus) */
+  .about-hero-content h1,
+  .contact-hero-content h1,
+  .policy-hero .section-title {
+    font-size: clamp(26px, 7.5vw, 34px);
+    line-height: 1.05;
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+  }
+
+  /* Intro paragraph sizing and readability */
+  .about-hero-content p,
+  .contact-hero-content p,
+  .policy-hero .section-intro {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 42ch;
+    margin: 0.6rem auto 1rem;
+    color: rgba(255,255,255,0.95);
+  }
+
+  /* Hero CTAs: full-width-ish buttons with comfortable touch sizes */
+  .about-hero-content .hero-actions .btn,
+  .contact-hero-content .hero-actions .btn,
+  .policy-hero .hero-actions .btn {
+    display: block;
+    width: 100%;
+    max-width: 460px;
+    min-height: 50px;
+    padding: 0.6rem 1rem;
+    font-size: 16px;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  .about-hero-content .hero-actions .btn + .btn,
+  .policy-hero .hero-actions .btn + .btn {
+    margin-top: 0.6rem;
+  }
+
+  /* Feature badges: stack vertically for readability */
+  .hero-badges,
+  .feature-badges,
+  .about-hero-content .badges {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    align-items: center !important;
+    margin-top: 0.9rem;
+  }
+  .hero-badges .badge,
+  .feature-badges .badge,
+  .about-hero-content .badge {
+    font-size: 14px;
+    padding: 0.45rem 0.8rem;
+    min-width: 140px;
+  }
+
+  /* Ensure overlay remains strong enough for contrast */
+  .about-hero .overlay,
+  .policy-hero .overlay,
+  .contact-hero .overlay {
+    background-color: rgba(0,0,0,0.62);
+  }
+
+  /* Prevent hero content from collapsing too narrow */
+  .about-hero-content,
+  .policy-hero .container {
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Slightly larger touch targets for 430px devices */
+@media (max-width: 430px) {
+  .about-hero-content h1,
+  .policy-hero .section-title {
+    font-size: clamp(26px, 8.5vw, 34px);
+  }
+  .about-hero-content .hero-actions .btn,
+  .policy-hero .hero-actions .btn {
+    min-height: 52px;
+  }
+}
 .policy-cta-section {
   padding: 4rem 0 3rem;
   background: linear-gradient(180deg, #fcfbf8 0%, #f8f5ee 100%);
@@ -4351,7 +4483,7 @@ body {
 }
 
 .about-cta-section {
-  padding: 8rem 0;
+  padding: 1.5rem 0;
   background-color: var(--primary-color);
   color: #ffffff;
 }

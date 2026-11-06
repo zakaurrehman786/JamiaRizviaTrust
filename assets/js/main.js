@@ -1,2 +1,2 @@
-import '../css files/style.css'
+import '../css/style.css'
 

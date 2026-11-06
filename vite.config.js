@@ -8,7 +8,11 @@ export default {
         book_demo: 'book-demo.html',
         thankyou: 'thank-you.html',
         notfound: '404.html',
-        about: 'about.html'
+        about: 'about.html',
+        privacy_policy: 'privacy-policy.html',
+        terms: 'terms.html',
+        refund_policy: 'refund-policy.html',
+        cookie_policy: 'cookie-policy.html'
       }
     }
   },

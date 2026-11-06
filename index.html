@@ -1,19 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BXM24N234Y"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-BXM24N234Y");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#004aad" />
@@ -26,11 +13,11 @@
       content="Online Quran Academy, Online Quran Classes, Learn Quran Online, Quran Classes for Kids, Quran Teacher Online, Online Tajweed Classes, Online Hifz Program"
     />
     <!-- <meta name="author" content="Jamia Rizvia Online Quran Academy" /> -->
-    <link rel="canonical" href="https://jamiarizviatrust.com/" />
+    <link rel="canonical" href="https://jamiarizviatrust.org/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jamiarizviatrust.com/" />
+    <meta property="og:url" content="https://jamiarizviatrust.org/" />
     <meta
       property="og:title"
       content="Learn Quran Online from Qualified Teachers - Jamia Rizvia Online Quran Academy"
@@ -41,12 +28,12 @@
     />
     <meta
       property="og:image"
-      content="https://jamiarizviatrust.com/hero-main.webp"
+      content="https://jamiarizviatrust.org/hero-main.webp"
     />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://jamiarizviatrust.com/" />
+    <meta property="twitter:url" content="https://jamiarizviatrust.org/" />
     <meta
       property="twitter:title"
       content="Learn Quran Online - Jamia Rizvia Online Quran Academy"
@@ -57,7 +44,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://jamiarizviatrust.com/hero-main.webp"
+      content="https://jamiarizviatrust.org/hero-main.webp"
     />
 
     <!-- Favicon -->
@@ -65,7 +52,7 @@
     <link rel="apple-touch-icon" href="/logo.png" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css files/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,6 +71,22 @@
       Learn Quran Online from Qualified Teachers - Jamia Rizvia Online Quran
       Academy
     </title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Jamia Rizvia Online Quran Academy",
+        "url": "https://jamiarizviatrust.org/",
+        "description": "Professional one-to-one online Quran classes for children and adults with qualified teachers.",
+        "email": "info@jamiarizviatrust.org",
+        "telephone": "+923481466844",
+        "areaServed": "Worldwide",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Jamia Rizvia Trust"
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -91,11 +94,11 @@
     <header>
       <div class="section-navbar">
         <div class="container">
-          <nav class="navbar">
-            <button class="menu-toggle" aria-label="Toggle menu">
-              <i class="fas fa-bars"></i>
+          <nav class="navbar" aria-label="Primary">
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="nav-content">
+            <div class="nav-content" id="primary-navigation">
               <ul class="nav-links">
                 <li><a href="/index.html" class="active">Home</a></li>
                 <li><a href="#course-content-section">Courses</a></li>
@@ -904,14 +907,14 @@
               </li>
               <li>
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:info@jamiarizviatrust.com" class="footer-link"
+                <a href="mailto:info@jamiarizviatrust.org" class="footer-link"
                   >info@jamiarizviatrust.org</a
                 >
               </li>
               <li>
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:support@jamiarizviatrust.com" class="footer-link"
-                  >reach@jamiarizviatrust.org</a
+                <a href="mailto:support@jamiarizviatrust.org" class="footer-link"
+                  >support@jamiarizviatrust.org</a
                 >
               </li>
               <li>
@@ -920,7 +923,7 @@
               </li>
               <li>
                 <i class="fas fa-clock"></i>
-                24/7 Scheduling Available
+                24/7 Support & Scheduling
               </li>
             </ul>
           </div>
@@ -936,50 +939,7 @@
     <!-- ========== End Footer Section ========== -->
 
     <script type="module" src="/assets/js/navbar.js"></script>
-    <script>
-      // FAQ Accordion Toggle Script
-      document.addEventListener("DOMContentLoaded", function () {
-        const questions = document.querySelectorAll(".faq-question");
-        questions.forEach((q) => {
-          q.addEventListener("click", () => {
-            const item = q.parentElement;
-            const wasActive = item.classList.contains("active");
-
-            // Close all
-            document
-              .querySelectorAll(".faq-item")
-              .forEach((el) => el.classList.remove("active"));
-
-            // Toggle current
-            if (!wasActive) {
-              item.classList.add("active");
-            }
-          });
-        });
-      });
-
-      const revealItems = document.querySelectorAll(".reveal-up");
-
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-      } else {
-        const revealObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
-        );
-
-        revealItems.forEach((item, index) => {
-          item.style.transitionDelay = `${index * 80}ms`;
-          revealObserver.observe(item);
-        });
-      }
-    </script>
+    <script type="module" src="/assets/js/home.js"></script>
+    <script type="module" src="/assets/js/cookie-consent.js"></script>
   </body>
 </html>

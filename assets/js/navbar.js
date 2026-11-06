@@ -1,39 +1,44 @@
-console.log("navbar.js loaded");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navbar = document.querySelector(".navbar");
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbar = document.querySelector('.navbar');
+  if (menuToggle instanceof HTMLButtonElement && navbar instanceof HTMLElement) {
+    const setMenuOpen = (isOpen) => {
+      navbar.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation",
+      );
+    };
 
-    if (menuToggle && navbar) {
-        // Toggle menu
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(!navbar.classList.contains("active"));
+    });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!navbar.contains(event.target) && navbar.classList.contains('active')) {
-                navbar.classList.remove('active');
-            }
-        });
+    document.addEventListener("click", (event) => {
+      if (event.target instanceof Node && !navbar.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    });
 
-        // Close menu when clicking a link
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navbar.classList.remove('active');
-            });
-        });
-    } else {
-        console.warn("menuToggle or navbar not found!");
-    }
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navbar.classList.contains("active")) {
+        setMenuOpen(false);
+        menuToggle.focus();
+      }
+    });
+
+    navbar.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+  } else {
+    console.error("Navigation menu is missing its button or navigation element.");
+  }
 });
 
-//about section js
-document.addEventListener("DOMContentLoaded", function() {
-  const cardTexts = document.querySelectorAll(".card-text");
-
-  cardTexts.forEach(text => {
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".card-text").forEach((text) => {
     text.addEventListener("click", () => {
       text.classList.toggle("expanded");
     });

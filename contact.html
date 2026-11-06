@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXM24N234Y"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BXM24N234Y');
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#004aad" />
@@ -21,11 +13,11 @@
       content="contact Quran academy, international Quran academy support, WhatsApp Quran teacher, register online Quran classes"
     />
     <meta name="author" content="Jamia Rizvia Online Quran Academy" />
-    <link rel="canonical" href="https://jamiarizviatrust.com/contact.html" />
+    <link rel="canonical" href="https://jamiarizviatrust.org/contact.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jamiarizviatrust.com/contact.html" />
+    <meta property="og:url" content="https://jamiarizviatrust.org/contact.html" />
     <meta
       property="og:title"
       content="Contact Us - Jamia Rizvia Online Quran Academy"
@@ -34,14 +26,14 @@
       property="og:description"
       content="Reach our international helpdesk via WhatsApp or email. Fill out our contact form for class inquiries and enrollment queries."
     />
-    <meta property="og:image" content="https://jamiarizviatrust.com/hero-main.webp" />
+    <meta property="og:image" content="https://jamiarizviatrust.org/hero-main.webp" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css files/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,11 +55,11 @@
     <header>
       <div class="section-navbar">
         <div class="container">
-          <nav class="navbar">
-            <button class="menu-toggle" aria-label="Toggle menu">
-              <i class="fas fa-bars"></i>
+          <nav class="navbar" aria-label="Primary">
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="nav-content">
+            <div class="nav-content" id="primary-navigation">
               <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/index.html#course-content-section">Courses</a></li>
@@ -137,11 +129,13 @@
         <div class="contact-grid">
           <!-- Contact Form -->
           <div class="contact-form-container">
-            <h2>Send us a Message</h2>
-            <p class="form-desc-text">Have a question about class scheduling, fees, or custom plans? Send us a message and our support team will reply within 12 hours.</p>
+            <h2 id="contact-form-heading">Send us a Message</h2>
+            <p class="form-desc-text" id="contact-form-description">Have a question about class scheduling, fees, or custom plans? Send us a message and our support team will reply within 12 hours.</p>
             <form
               id="contactForm"
               class="contact-form"
+              aria-labelledby="contact-form-heading"
+              aria-describedby="contact-form-description"
               action="https://formsubmit.co/info@jamiarizviatrust.org"
               method="POST"
             >
@@ -152,38 +146,57 @@
               />
               <input type="hidden" name="_template" value="table" />
               <input
+                class="form-honeypot"
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+              <input
                 type="hidden"
                 name="_next"
-                value="https://jamiarizviatrust.org/thank-you.html"
+                value="https://jamiarizviatrust.org/thank-you.html?source=contact"
               />
 
               <div class="form-group">
+                <label for="name">Your Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   placeholder="Your Name"
+                  minlength="2"
+                  maxlength="100"
+                  autocomplete="name"
                   required
                 />
               </div>
               <div class="form-group">
+                <label for="email">Your Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="Your Email"
+                  maxlength="254"
+                  autocomplete="email"
                   required
                 />
               </div>
               <div class="form-group">
+                <label for="phone">Phone Number (optional)</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   placeholder="Phone Number (e.g. +1 or +44)"
+                  maxlength="32"
+                  autocomplete="tel"
                 />
               </div>
               <div class="form-group">
+                <label for="subject">What can we help with?</label>
                 <select id="subject" name="subject" required>
                   <option value="">Select Subject</option>
                   <option value="enrollment">Student Enrollment</option>
@@ -193,14 +206,18 @@
                 </select>
               </div>
               <div class="form-group">
+                <label for="message">Your Message</label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Your Message"
                   rows="6"
+                  minlength="10"
+                  maxlength="3000"
                   required
                 ></textarea>
               </div>
+              <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
               <button type="submit" class="submit-btn">Send Message</button>
             </form>
           </div>
@@ -218,7 +235,7 @@
                     <strong>Administrative Note:</strong> Jamia Rizvia Online Quran Academy is an online-first educational institution serving students globally. The academy is a project of Jamia Rizvia Trust
                   </p>
                   <p>
-                    <i class="fas fa-clock"></i> <strong>Support Hours:</strong> Mon - Sat: 9:00 AM - 9:00 PM (GMT+5)
+                    <i class="fas fa-clock"></i> <strong>Support Hours:</strong> 24/7 via WhatsApp and email
                   </p>
                   <p>
                     <i class="fas fa-globe-europe"></i> <strong>Class Hours:</strong> 24/7 according to your local timezone.
@@ -273,7 +290,7 @@
               </li>
               <li>
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:reach@jamiarizviatrust.org" class="footer-link">reach@jamiarizviatrust.org</a>
+                <a href="mailto:support@jamiarizviatrust.org" class="footer-link">support@jamiarizviatrust.org</a>
               </li>
               <li>
                 <i class="fas fa-globe"></i>
@@ -281,7 +298,7 @@
               </li>
               <li>
                 <i class="fas fa-clock"></i>
-                24/7 Scheduling Available
+                24/7 Support & Scheduling
               </li>
             </ul>
           </div>
@@ -295,17 +312,6 @@
 
     <script type="module" src="/assets/js/navbar.js"></script>
     <script type="module" src="/assets/js/contact.js"></script>
-    <script>
-      // Toggle menu mobile navigation helper
-      document.addEventListener('DOMContentLoaded', function() {
-        const toggleBtn = document.querySelector('.menu-toggle');
-        const navContent = document.querySelector('.nav-content');
-        if (toggleBtn && navContent) {
-          toggleBtn.addEventListener('click', function() {
-            navContent.classList.toggle('active');
-          });
-        }
-      });
-    </script>
+    <script type="module" src="/assets/js/cookie-consent.js"></script>
   </body>
 </html>

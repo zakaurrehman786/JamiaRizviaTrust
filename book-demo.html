@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXM24N234Y"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BXM24N234Y');
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#004aad" />
@@ -21,17 +13,17 @@
       content="book free trial Quran class, online Quran demo class, trial session Tajweed, Jamia Rizvia demo"
     />
     <meta name="author" content="Jamia Rizvia Online Quran Academy" />
-    <link rel="canonical" href="https://jamiarizviatrust.com/book-demo.html" />
+    <link rel="canonical" href="https://jamiarizviatrust.org/book-demo.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jamiarizviatrust.com/book-demo.html" />
+    <meta property="og:url" content="https://jamiarizviatrust.org/book-demo.html" />
     <meta property="og:title" content="Book a Free Trial Class - Jamia Rizvia Online Quran Academy" />
     <meta
       property="og:description"
       content="Select your timezone and schedule a 1-to-1 live demo class. Start learning Quran with Tajweed under professional tutors."
     />
-    <meta property="og:image" content="https://jamiarizviatrust.com/hero-main.webp" />
+    <meta property="og:image" content="https://jamiarizviatrust.org/hero-main.webp" />
 
     <title>Book a Free Trial Class - Jamia Rizvia Online Quran Academy</title>
 
@@ -45,7 +37,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css files/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -59,11 +51,11 @@
     <header>
       <div class="section-navbar">
         <div class="container">
-          <nav class="navbar">
-            <button class="menu-toggle" aria-label="Toggle menu">
-              <i class="fas fa-bars"></i>
+          <nav class="navbar" aria-label="Primary">
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="nav-content">
+            <div class="nav-content" id="primary-navigation">
               <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/index.html#course-content-section">Courses</a></li>
@@ -145,7 +137,7 @@
               </li>
               <li>
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:reach@jamiarizviatrust.org" class="footer-link">reach@jamiarizviatrust.org</a>
+                <a href="mailto:support@jamiarizviatrust.org" class="footer-link">support@jamiarizviatrust.org</a>
               </li>
               <li>
                 <i class="fas fa-globe"></i>
@@ -153,7 +145,7 @@
               </li>
               <li>
                 <i class="fas fa-clock"></i>
-                24/7 Scheduling Available
+                24/7 Support & Scheduling
               </li>
             </ul>
           </div>
@@ -166,17 +158,6 @@
     <!-- ========== End Footer Section ========== -->
 
     <script type="module" src="/assets/js/navbar.js"></script>
-    <script>
-      // Toggle menu mobile navigation helper
-      document.addEventListener('DOMContentLoaded', function() {
-        const toggleBtn = document.querySelector('.menu-toggle');
-        const navContent = document.querySelector('.nav-content');
-        if (toggleBtn && navContent) {
-          toggleBtn.addEventListener('click', function() {
-            navContent.classList.toggle('active');
-          });
-        }
-      });
-    </script>
+    <script type="module" src="/assets/js/cookie-consent.js"></script>
   </body>
 </html>

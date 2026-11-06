@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXM24N234Y"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BXM24N234Y');
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#004aad" />
@@ -21,24 +13,24 @@
       content="About Jamia Rizvia, Islamic scholars, Quran academy history, Mufti Ghulam Sarwer Qadri, Islamic education legacy"
     />
     <meta name="author" content="Jamia Rizvia Trust" />
-    <link rel="canonical" href="https://jamiarizviatrust.com/about.html" />
+    <link rel="canonical" href="https://jamiarizviatrust.org/about.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jamiarizviatrust.com/about.html" />
+    <meta property="og:url" content="https://jamiarizviatrust.org/about.html" />
     <meta property="og:title" content="About Us - Jamia Rizvia Online Quran Academy" />
     <meta
       property="og:description"
       content="Discover the rich history of Jamia Rizvia Trust, established in 1984 by Mufti Ghulam Sarwer Qadri (RA), and our mission to provide quality online Quran education."
     />
-    <meta property="og:image" content="https://jamiarizviatrust.com/hero-main.webp" />
+    <meta property="og:image" content="https://jamiarizviatrust.org/hero-main.webp" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css files/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -60,11 +52,11 @@
     <header>
       <div class="section-navbar">
         <div class="container">
-          <nav class="navbar">
-            <button class="menu-toggle" aria-label="Toggle menu">
-              <i class="fas fa-bars"></i>
+          <nav class="navbar" aria-label="Primary">
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="nav-content">
+            <div class="nav-content" id="primary-navigation">
               <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/index.html#course-content-section">Courses</a></li>
@@ -262,7 +254,7 @@
               </li>
               <li>
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:reach@jamiarizviatrust.org" class="footer-link">reach@jamiarizviatrust.org</a>
+                <a href="mailto:support@jamiarizviatrust.org" class="footer-link">support@jamiarizviatrust.org</a>
               </li>
               <li>
                 <i class="fas fa-globe"></i>
@@ -270,7 +262,7 @@
               </li>
               <li>
                 <i class="fas fa-clock"></i>
-                24/7 Scheduling Available
+                24/7 Support & Scheduling
               </li>
             </ul>
           </div>
@@ -283,17 +275,6 @@
     <!-- ========== End Footer Section ========== -->
 
     <script type="module" src="/assets/js/navbar.js"></script>
-    <script>
-      // Toggle menu mobile navigation helper
-      document.addEventListener('DOMContentLoaded', function() {
-        const toggleBtn = document.querySelector('.menu-toggle');
-        const navContent = document.querySelector('.nav-content');
-        if (toggleBtn && navContent) {
-          toggleBtn.addEventListener('click', function() {
-            navContent.classList.toggle('active');
-          });
-        }
-      });
-    </script>
+    <script type="module" src="/assets/js/cookie-consent.js"></script>
   </body>
 </html>

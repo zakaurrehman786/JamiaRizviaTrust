@@ -4092,7 +4092,7 @@ body {
 
 .about-hero-content p {
   font-size: 1.7rem;
-  color: #ffffff;
+  color: var(--btn-and-decor-color);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -5137,6 +5137,17 @@ body {
    ========================================================================== */
 
 @media screen and (max-width: 1024px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 4rem 2rem;
+  }
+
+  .hero-content-container {
+    max-height: none;
+  }
+
   .hero-content-container h1 {
     font-size: 4.2rem;
   }
@@ -5227,6 +5238,56 @@ body {
   .legacy-grid {
     grid-template-columns: 1fr;
     gap: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  .hero-cta-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 54rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-cta-group .btn {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-highlights {
+    width: 100%;
+    max-width: 68rem;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .highlights-row {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .highlights-row + .highlights-row {
+    width: 66.666%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0 auto;
+  }
+
+  .highlight-item {
+    width: 100%;
+    min-width: 0;
+    min-height: 4.4rem;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1rem;
+    border-radius: 1.2rem;
+    font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+    text-align: center;
   }
 }
 
@@ -5322,9 +5383,15 @@ body {
 
 @media screen and (max-width: 576px) {
   .hero-section {
-    min-height: auto;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
     padding: 2rem 1.2rem 3rem;
     background-position: center;
+  }
+
+  .hero-content-container {
+    max-height: none;
   }
 
   /* .hero-content-container {
@@ -5435,12 +5502,12 @@ body {
   }
 }
 
-.hero-content-container h1,
+
 .about-hero-content h1,
 .contact-hero-content h1,
 .donation-hero-content h1,
 .policy-hero .section-header h1 {
-  color: #fff;
+  color: var(--heading-hero);
   font-family: "Playfair Display", serif;
   font-size: clamp(3rem, 4.5vw, 4.4rem);
   font-weight: 700;

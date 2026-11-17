@@ -4,6 +4,7 @@
   padding: 4rem 0 2rem 0;
 }
 
+
 /* Mobile tweak: ensure hero text is readable around 320-480px (focus 430px) */
 @media screen and (max-width: 480px) {
   .hero-content-container h1 {
@@ -1879,19 +1880,17 @@ main {
 }
 
 .course-card.coming-soon .coming-soon-badge {
-  position: absolute;
-  left: 50%;
-  top: 2rem;
-  transform: translateX(-50%);
+  position: static;
+  display: inline-flex;
+  align-self: flex-start;
+  margin-bottom: 1.2rem;
   background: #f8f2df;
   color: var(--primary-color);
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
-  font-size: 1.4rem;
-  font-weight: 800;
-  z-index: 30;
+  font-size: 1.2rem;
+  font-weight: 700;
   white-space: nowrap;
-  display: inline-block;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -4886,6 +4885,29 @@ body {
   line-height: 1.45;
 }
 
+.course-price {
+  margin: 0 0 1.6rem;
+  color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.course-price span {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.course-pricing-note {
+  margin: 0 auto;
+  max-width: 70rem;
+  color: var(--text-secondary);
+  font-size: 1.35rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 /* Age pill badge */
 .course-age-pill {
   position: relative;
@@ -5410,5 +5432,82 @@ body {
   .cookie-consent-actions button {
     padding: 0.8rem;
     font-size: 1.25rem;
+  }
+}
+
+.hero-content-container h1,
+.about-hero-content h1,
+.contact-hero-content h1,
+.donation-hero-content h1,
+.policy-hero .section-header h1 {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 4.5vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.batch-course-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.batch-course-actions a {
+  width: 100%;
+}
+
+body {
+  animation: page-enter 420ms ease-out both;
+}
+
+.hero-section,
+.about-hero,
+.contact-hero,
+.donation-hero,
+.policy-hero,
+.course-hero-section,
+.thank-you-section,
+.not-found-page {
+  animation: content-enter 520ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body,
+  .hero-section,
+  .about-hero,
+  .contact-hero,
+  .donation-hero,
+  .policy-hero,
+  .course-hero-section,
+  .thank-you-section,
+  .not-found-page {
+    animation: none;
   }
 }
